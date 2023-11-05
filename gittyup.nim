@@ -1374,7 +1374,7 @@ iterator revWalk*(repo: GitRepository;
           break
 
         # a successful lookup; yield the commit
-        yield Result[GitThing, GitResultCode].ok(newThing commit.get)
+        yield Result[GitThing, GitResultCode].ok(commit)
 
         # fetch the next step in the walk
         future = walker.next
